@@ -1397,10 +1397,10 @@
 				xhr = new ActiveXObject('Microsoft.XMLHTTP');
 			}
 			if(options.type == 'GET') {
-				xhr.open(options.type, apipath + "?" + params, true);
+				xhr.open(options.type, options.url + "?" + params, true);
 				xhr.send(null);
 			} else if(options.type == 'POST') {
-				xhr.open(options.type, apipath, true);
+				xhr.open(options.type, options.url, true);
 				//xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 				xhr.setRequestHeader("Content-Type", "application/json");
 				xhr.send(JSON.stringify(options.data));
